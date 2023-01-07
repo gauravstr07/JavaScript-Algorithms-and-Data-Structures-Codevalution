@@ -1,25 +1,23 @@
-function factorial(n) {
-  let result = 1;
-  for (let i = 2; i <= n; i++) {
-    result = result * i;
+function isPrime(n) {
+  if (n < 2) {
+    return "Number is Prime ---> " + false;
   }
-  return "factorial is ---> " + result;
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return "Number is Prime ---> " + false;
+    }
+  }
+  return "Number is Prime ---> " + true;
 }
 
-console.log(factorial(0));
-console.log(factorial(2));
-console.log(factorial(2));
-console.log(factorial(3));
-console.log(factorial(5));
-console.log(factorial(6));
+console.log(isPrime(2));
+console.log(isPrime(12));
+console.log(isPrime(6));
 
-/** output
+/**
  * 
- * factorial is ---> 1
-   factorial is ---> 2
-   factorial is ---> 2
-   factorial is ---> 6
-   factorial is ---> 120
-   factorial is ---> 720
+ * Number is Prime ---> true
+   Number is Prime ---> false
+   Number is Prime ---> false
  * 
  */
