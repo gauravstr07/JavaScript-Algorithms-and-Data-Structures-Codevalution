@@ -1,23 +1,26 @@
-function isPrime(n) {
-  if (n < 2) {
-    return "Number is Prime ---> " + false;
+function isPowerOfTwo(n) {
+  if (n < 1) {
+    return false;
   }
-  for (let i = 2; i < n; i++) {
-    if (n % i === 0) {
-      return "Number is Prime ---> " + false;
+
+  while (n > 1) {
+    if (n % 2 !== 0) {
+      return false;
     }
+    n = n / 2;
   }
-  return "Number is Prime ---> " + true;
+
+  return true;
 }
 
-console.log(isPrime(2));
-console.log(isPrime(12));
-console.log(isPrime(6));
+console.log(isPowerOfTwo(1));
+console.log(isPowerOfTwo(2));
+console.log(isPowerOfTwo(3));
 
-/**
+/** output
  * 
- * Number is Prime ---> true
-   Number is Prime ---> false
-   Number is Prime ---> false
+ * true
+   true
+   false
  * 
  */
