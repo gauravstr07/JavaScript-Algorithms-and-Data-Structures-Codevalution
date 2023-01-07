@@ -1,19 +1,25 @@
-function fibonacci(n) {
-  const fib = [0, 1];
-  for (let i = 2; i < n; i++) {
-    fib[i] = fib[i - 1] + fib[i - 2];
+function factorial(n) {
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result = result * i;
   }
-  return "Fibonacci  --> " + fib;
+  return "factorial is ---> " + result;
 }
 
-console.log(fibonacci(5));
-console.log(fibonacci(8));
-console.log(fibonacci(9));
+console.log(factorial(0));
+console.log(factorial(2));
+console.log(factorial(2));
+console.log(factorial(3));
+console.log(factorial(5));
+console.log(factorial(6));
 
 /** output
  * 
- * Fibonacci  --> 0,1,1,2,3
-   Fibonacci  --> 0,1,1,2,3,5,8,13
-   Fibonacci  --> 0,1,1,2,3,5,8,13,21
+ * factorial is ---> 1
+   factorial is ---> 2
+   factorial is ---> 2
+   factorial is ---> 6
+   factorial is ---> 120
+   factorial is ---> 720
  * 
  */
